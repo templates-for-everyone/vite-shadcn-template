@@ -11,13 +11,13 @@ npm create vite@latest
 Install tailwind:
 
 ```bash
-npm install tailwindcss @tailwindcss/vite
+npm install tailwindcss @tailwindcss/vite tw-animate-css
 ```
 
 Then, replace everything in `src/index.css` with the following:
 
 ```css
-@import "tailwindcss";
+@import 'tailwindcss';
 ```
 
 ## 3. Edit Typescript configuration
@@ -63,23 +63,20 @@ npm install -D @types/node
 Add the following code to the vite.config.ts so your app can resolve paths without error:
 
 ```ts
-import path from "path";
-import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import path from 'path'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    ...
-    tailwindcss(),
-  ],
+  plugins: [...tailwindcss()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-});
+})
 ```
 
 ## 5. Add Shadcn/ui
@@ -99,3 +96,11 @@ Run the following cli to add any component you want:
 ```bash
 npx shadcn@latest add <component?>
 ```
+
+## 7. Add React Router to handle project
+
+```bash
+npm install react-router-dom
+```
+
+**Note: Use `--legacy-peer-deps` if needed.**
