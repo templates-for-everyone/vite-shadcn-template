@@ -1,3 +1,8 @@
 export default {
-  plugins: [require('tw-animate-css')],
+  content: ['./src/**/*.{jsx,tsx}'],
+  darkMode: 'class',
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }
