@@ -87,6 +87,8 @@ Now run the CLI:
 npx shadcn@latest init
 ```
 
+**Note: Use `--legacy-peer-deps` or `--force` from this time.**
+
 You will be asked a few questions to configure components.json.
 
 ## 6. Add Components
@@ -103,4 +105,8 @@ npx shadcn@latest add <component?>
 npm install react-router-dom
 ```
 
-**Note: Use `--legacy-peer-deps` if needed.**
+## 7. Add some necessary dependencies
+
+```bash
+npm install vite-tsconfig-paths axios
+```
