@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
-import { ThemeProvider } from './contexts/theme/ThemeProvider'
+import { ContextProviders } from '@/contexts/ContextProviders'
 import Home from './pages/Home'
 
 function App() {
   return (
-    <ThemeProvider storageKey="app-theme">
+    <ContextProviders>
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Add more Route here */}
       </Routes>
-    </ThemeProvider>
+    </ContextProviders>
   )
 }
 
